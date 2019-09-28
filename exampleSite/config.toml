@@ -3,219 +3,212 @@ baseURL = "https://www.example.org/"
 theme = "aafu"
 
 [params]
-title = "Aafu theme"
-author = "Darshan Baral"
-description = "Website title"
-copyright = "aaa"
+author = "Mountain Head"
+copyright = "mountain head"
+description = "Welcome to the TOP"
+title = "Mountain Head"
 
-  [params.theme]
-  allowToggle = true
-  mainTheme = "light"
-  altTheme = "dark"
-  showAttribute = true
+[params.aboutme]
+description = "**Tagline. Lorem ipsum dolor sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+icon = "fas fa-user"
+title = "About Me"
 
-  [params.favicons]
-  use = true
-  metas = """
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">\r
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">\r
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">\r
-        <link rel="manifest" href="site.webmanifest">\r
-        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">\r
-        <link rel="shortcut icon" href="favicon.ico">\r
-        """
+[params.education]
+icon = "fas fa-graduation-cap"
+title = "Education"
 
-  [params.profile]
-  name = "First Last, Abbr."
-  tagline = "Title"
-  location = "City Name, ST"
-  photo = "profile.jpg"
+[[params.education.list]]
+college = "University of State-City"
+dates = "2013 - 2018"
+degree = "Ph.D. in Subject"
+thesis_link = "#"
+thesis_title = "Effect of humans on other humans: a study of human behavior."
 
-  [params.social]
-  title = "Links"
+[[params.education.list]]
+college = "University of State-City"
+dates = "2013 - 2018"
+degree = "M.S. in Subject"
+thesis_link = "#"
+thesis_title = "Effect of humans on other humans: a study of human behavior."
 
-    [[params.social.list]]
-    class = "fab"
-    icon = "fa-linkedin-in"
-    url = "#"
-    title = "LinkedIn"
+[[params.education.list]]
+college = "University of State-City"
+dates = "2004 - 2009"
+degree = "B.S. in Subject"
 
-    [[params.social.list]]
-    class = "fab"
-    icon = "fa-stack-overflow"
-    url = "#"
-    title = "StackOverflow"
+[params.experience]
+icon = "fas fa-briefcase"
+title = "Experiences"
 
-    [[params.social.list]]
-    class = "fab"
-    icon = "fa-github"
-    url = "#"
-    title = "GitHub"
+[[params.experience.list]]
+company = "Mountain Head"
+dates = "2019 - *Present*"
+details = "Printed from desktop. Sent [emails](#). Called people using telephone. Drank water from office cooler. Ate donuts on people's birthdays."
+position = "Uphill Manager"
 
-    [[params.social.list]]
-    class = "fab"
-    icon = "fa-twitter"
-    url = "#"
-    title = "Twitter"
+[[params.experience.list]]
+company = "Company Name"
+dates = "2018 - 2019"
+link = "#"
+position = "Job Title"
 
-    [[params.social.list]]
-    class = "ai"
-    icon = "ai-google-scholar"
-    url = "#"
-    title = "Google Scholar"
+[params.favicons]
+metas = "        <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"apple-touch-icon.png\">\r\n        <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"favicon-32x32.png\">\r\n        <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"favicon-16x16.png\">\r\n        <link rel=\"manifest\" href=\"site.webmanifest\">\r\n        <link rel=\"mask-icon\" href=\"safari-pinned-tab.svg\" color=\"#252627\">\r\n        <link rel=\"shortcut icon\" href=\"favicon.ico\">\r\n        "
+use = true
 
-    [[params.social.list]]
-    class = "ai"
-    icon = "ai-researchgate"
-    url = "#"
-    title = "ResearchGate"
+[params.hobby]
+icon = "fas fa-gamepad"
+title = "Hobbies"
 
-  [[params.showInAccordion]]
-  item = "aboutme"
-  expand = true
+[[params.hobby.list]]
+hobby = "Cooking"
 
-  [[params.showInAccordion]]
-  item = "experience"
+[[params.hobby.list]]
+hobby = "Hiking"
 
-  [[params.showInAccordion]]
-  item = "education"
+[[params.hobby.list]]
+hobby = "Baking"
 
-  [[params.showInAccordion]]
-  item = "publication"
+[params.profile]
+location = "Delhi, India"
+name = "Mountain Head"
+photo = "profile.jpg"
+tagline = "Title"
 
-  [[params.showInAccordion]]
-  item = "project"
+[params.project]
+icon = "fas fa-project-diagram"
+title = "Projects"
 
-  [[params.showInAccordion]]
-  item = "skill"
+[[params.project.list]]
+description = "Description of the project"
+title = "project"
+url = "#"
 
-  [[params.showInAccordion]]
-  item = "hobby"
+[[params.project.list]]
+description = "Description of the project"
+title = "project"
+url = "#"
 
-  [params.aboutme]
-  title = "About Me"
-  icon = "fas fa-user"
-  description = "**Tagline. Lorem ipsum dolor sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+[[params.project.list]]
+description = "Description of the project"
+title = "project"
+url = "#"
 
-  [params.experience]
-  title = "Experiences"
-  icon = "fas fa-briefcase"
+[[params.project.list]]
+description = "Description of the project"
+title = "project"
+url = "#"
 
-    [[params.experience.list]]
-    position = "Job Title"
-    dates = "2019 - *Present*"
-    company = "Company Name"
-    details = "Printed from desktop. Sent [emails](#). Called people using telephone. Drank water from office cooler. Ate donuts on people's birthdays."
+[params.publication]
+format = ["date", "authors", "title", "journal"]
+icon = "fas fa-book"
+title = "Publications"
+types = ["Journal Articles", "Proceedings"]
 
-    [[params.experience.list]]
-    position = "Job Title"
-    dates = "2018 - 2019"
-    company = "Company Name"
-    link = "#"
+[[params.publication.list]]
+authors = "F Last, F Second, P secondary"
+date = "2018"
+journal = "Journal of Field 52 (16), 9033-9044"
+link = "#"
+title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+type = "Journal Articles"
 
-  [params.education]
-  title = "Education"
-  icon = "fas fa-graduation-cap"
+[[params.publication.list]]
+authors = "F Last, F Second, P secondary"
+date = "2018"
+journal = "Journal of Field 52 (16), 9033-9044"
+link = "#"
+title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+type = "Journal Articles"
 
-    [[params.education.list]]
-    degree = "Ph.D. in Subject"
-    college = "University of State-City"
-    dates = "2013 - 2018"
-    thesis_title = "Effect of humans on other humans: a study of human behavior."
-    thesis_link = "#"
+[[params.publication.list]]
+authors = "F Last, F Second, P secondary"
+date = "2018"
+journal = "Journal of Field 52 (16), 9033-9044"
+link = "#"
+title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+type = "Proceedings"
 
-    [[params.education.list]]
-    degree = "M.S. in Subject"
-    college = "University of State-City"
-    dates = "2013 - 2018"
-    thesis_title = "Effect of humans on other humans: a study of human behavior."
-    thesis_link = "#"
+[[params.showInAccordion]]
+expand = true
+item = "aboutme"
 
-    [[params.education.list]]
-    degree = "B.S. in Subject"
-    college = "University of State-City"
-    dates = "2004 - 2009"
+[[params.showInAccordion]]
+item = "experience"
 
-  [params.publication]
-  title = "Publications"
-  icon = "fas fa-book"
-  format = [ "date", "authors", "title", "journal" ]
-  types = [ "Journal Articles", "Proceedings" ]
+[[params.showInAccordion]]
+item = "education"
 
-    [[params.publication.list]]
-    title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    authors = "F Last, F Second, P secondary"
-    date = "2018"
-    journal = "Journal of Field 52 (16), 9033-9044"
-    link = "#"
-    type = "Journal Articles"
+[[params.showInAccordion]]
+item = "publication"
 
-    [[params.publication.list]]
-    title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    authors = "F Last, F Second, P secondary"
-    date = "2018"
-    journal = "Journal of Field 52 (16), 9033-9044"
-    link = "#"
-    type = "Journal Articles"
+[[params.showInAccordion]]
+item = "project"
 
-    [[params.publication.list]]
-    title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    authors = "F Last, F Second, P secondary"
-    date = "2018"
-    journal = "Journal of Field 52 (16), 9033-9044"
-    link = "#"
-    type = "Proceedings"
+[[params.showInAccordion]]
+item = "skill"
 
-  [params.project]
-  title = "Projects"
-  icon = "fas fa-project-diagram"
+[[params.showInAccordion]]
+item = "hobby"
 
-    [[params.project.list]]
-    title = "project"
-    url = "#"
-    description = "Description of the project"
+[params.skill]
+icon = "fas fa-cogs"
+panelId = "skill-panel"
+title = "Skills"
 
-    [[params.project.list]]
-    title = "project"
-    url = "#"
-    description = "Description of the project"
+[[params.skill.list]]
+skill = "Skill 1, Skill 2"
+skillrating = 90
 
-    [[params.project.list]]
-    title = "project"
-    url = "#"
-    description = "Description of the project"
+[[params.skill.list]]
+skill = "Skill 3"
+skillrating = 80
 
-    [[params.project.list]]
-    title = "project"
-    url = "#"
-    description = "Description of the project"
+[[params.skill.list]]
+skill = "Skill 4"
+skillrating = 50
 
-  [params.skill]
-  title = "Skills"
-  panelId = "skill-panel"
-  icon = "fas fa-cogs"
+[params.social]
+title = "Links"
 
-    [[params.skill.list]]
-    skill = "Skill 1, Skill 2"
-    skillrating = 90
+[[params.social.list]]
+class = "fab"
+icon = "fa-linkedin-in"
+title = "LinkedIn"
+url = "#"
 
-    [[params.skill.list]]
-    skill = "Skill 3"
-    skillrating = 80
+[[params.social.list]]
+class = "fab"
+icon = "fa-stack-overflow"
+title = "StackOverflow"
+url = "#"
 
-    [[params.skill.list]]
-    skill = "Skill 4"
-    skillrating = 50
+[[params.social.list]]
+class = "fab"
+icon = "fa-github"
+title = "GitHub"
+url = "#"
 
-  [params.hobby]
-  title = "Hobbies"
-  icon = "fas fa-gamepad"
+[[params.social.list]]
+class = "fab"
+icon = "fa-twitter"
+title = "Twitter"
+url = "#"
 
-    [[params.hobby.list]]
-    hobby = "Cooking"
+[[params.social.list]]
+class = "ai"
+icon = "ai-google-scholar"
+title = "Google Scholar"
+url = "#"
 
-    [[params.hobby.list]]
-    hobby = "Hiking"
+[[params.social.list]]
+class = "ai"
+icon = "ai-researchgate"
+title = "ResearchGate"
+url = "#"
 
-    [[params.hobby.list]]
-    hobby = "Baking"
+[params.theme]
+allowToggle = true
+altTheme = "dark"
+mainTheme = "light"
+showAttribute = true
