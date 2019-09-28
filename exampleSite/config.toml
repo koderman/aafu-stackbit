@@ -72,7 +72,7 @@ hobby = "Baking"
 [params.profile]
 location = "Delhi, India"
 name = "Mountain Head"
-photo = "profile.jpg"
+photo = "profile-1.jpg"
 tagline = "Title"
 
 [params.project]
