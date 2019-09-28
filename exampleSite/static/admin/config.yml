@@ -1,0 +1,378 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: exampleSite/static/images
+public_folder: /images
+collections:
+  - name: config
+    label: Config
+    files:
+      - name: config
+        label: Config
+        file: exampleSite/config.toml
+        fields:
+          - widget: string
+            name: languageCode
+            label: LanguageCode
+            required: true
+          - widget: hidden
+            name: baseURL
+            label: Base Url
+            required: false
+          - widget: string
+            name: theme
+            label: Theme
+            required: false
+          - widget: object
+            name: params
+            label: Site Parameters
+            required: true
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: false
+              - widget: string
+                name: author
+                label: Author
+                required: false
+              - widget: string
+                name: description
+                label: Description
+                required: false
+              - widget: string
+                name: copyright
+                label: Copyright
+                required: false
+              - widget: object
+                name: theme
+                label: Theme parameters
+                required: false
+                fields:
+                  - widget: boolean
+                    name: allowToggle
+                    label: AllowToggle
+                    required: false
+                  - widget: string
+                    name: mainTheme
+                    label: MainTheme
+                    required: false
+                  - widget: string
+                    name: altTheme
+                    label: AltTheme
+                    required: false
+                  - widget: boolean
+                    name: showAttribute
+                    label: ShowAttribute
+                    required: false
+              - widget: object
+                name: favicons
+                label: Favicons parameters
+                required: false
+                fields:
+                  - widget: boolean
+                    name: use
+                    label: Use
+                    required: false
+                  - widget: text
+                    name: metas
+                    label: Metas
+                    required: false
+              - widget: object
+                name: profile
+                label: Profile parameters
+                required: false
+                fields:
+                  - widget: string
+                    name: name
+                    label: Name
+                    required: false
+                  - widget: string
+                    name: tagline
+                    label: Tagline
+                    required: false
+                  - widget: string
+                    name: location
+                    label: Location
+                    required: false
+                  - widget: string
+                    name: photo
+                    label: Photo name
+                    required: false
+              - widget: object
+                name: social
+                label: Section for social links
+                required: false
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                    required: false
+                  - widget: list
+                    name: list
+                    label: Social Link
+                    required: false
+                    fields:
+                      - widget: string
+                        name: class
+                        label: Class
+                        required: false
+                      - widget: string
+                        name: icon
+                        label: Icon
+                        required: false
+                      - widget: string
+                        name: url
+                        label: Url
+                        required: false
+                      - widget: string
+                        name: title
+                        label: Title
+                        required: false
+              - widget: list
+                name: showInAccordion
+                label: Specify what is showin in the Accordion
+                required: false
+                fields:
+                  - widget: string
+                    name: item
+                    label: Item
+                    required: false
+                  - widget: boolean
+                    name: expand
+                    label: Expand
+                    required: false
+              - widget: object
+                name: aboutme
+                label: About Me
+                required: false
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                    required: false
+                  - widget: string
+                    name: icon
+                    label: Icon
+                    required: false
+                  - widget: string
+                    name: description
+                    label: Description
+                    required: false
+              - widget: object
+                name: experience
+                label: Experience
+                required: false
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                    required: false
+                  - widget: string
+                    name: icon
+                    label: Icon
+                    required: false
+                  - widget: list
+                    name: list
+                    label: Experience Link
+                    required: false
+                    fields:
+                      - widget: string
+                        name: position
+                        label: Position
+                        required: false
+                      - widget: string
+                        name: dates
+                        label: Dates
+                        required: false
+                      - widget: string
+                        name: company
+                        label: Company Name
+                        required: false
+                      - widget: string
+                        name: details
+                        label: Details
+                        required: false
+                      - widget: string
+                        name: link
+                        label: Link
+                        required: false
+              - widget: object
+                name: education
+                label: Education
+                required: false
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                    required: false
+                  - widget: string
+                    name: icon
+                    label: Icon
+                    required: false
+                  - widget: list
+                    name: list
+                    label: Education Link
+                    required: false
+                    fields:
+                      - widget: string
+                        name: degree
+                        label: Degree
+                        required: false
+                      - widget: string
+                        name: college
+                        label: College
+                        required: false
+                      - widget: string
+                        name: dates
+                        label: Dates
+                        required: false
+                      - widget: string
+                        name: thesis_title
+                        label: Thesis Title
+                        required: false
+                      - widget: string
+                        name: thesis_link
+                        label: Thesis link
+                        required: false
+              - widget: object
+                name: publication
+                label: Publication
+                required: false
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                    required: false
+                  - widget: string
+                    name: icon
+                    label: Icon
+                    required: false
+                  - widget: list
+                    name: format
+                    label: Format
+                    required: false
+                    field:
+                      label: String
+                      name: string
+                      widget: string
+                  - widget: list
+                    name: types
+                    label: types
+                    required: false
+                    field:
+                      label: String
+                      name: string
+                      widget: string
+                  - widget: list
+                    name: list
+                    label: Publication Link
+                    required: false
+                    fields:
+                      - widget: string
+                        name: title
+                        label: Title
+                        required: false
+                      - widget: string
+                        name: authors
+                        label: Authors
+                        required: false
+                      - widget: string
+                        name: date
+                        label: Date
+                        required: false
+                      - widget: string
+                        name: journal
+                        label: Journal
+                        required: false
+                      - widget: string
+                        name: link
+                        label: Link link
+                        required: false
+                      - widget: string
+                        name: type
+                        label: Type (Eg. Journal Articles)
+                        required: false
+              - widget: object
+                name: project
+                label: Project
+                required: false
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                    required: false
+                  - widget: string
+                    name: icon
+                    label: Icon
+                    required: false
+                  - widget: list
+                    name: list
+                    label: Project Link
+                    required: false
+                    fields:
+                      - widget: string
+                        name: title
+                        label: Title
+                        required: false
+                      - widget: string
+                        name: url
+                        label: Url
+                        required: false
+                      - widget: string
+                        name: description
+                        label: Description of the project
+                        required: false
+              - widget: object
+                name: skill
+                label: Skill
+                required: false
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                    required: false
+                  - widget: string
+                    name: panelId
+                    label: PanelId
+                    required: false
+                  - widget: string
+                    name: icon
+                    label: Icon
+                    required: false
+                  - widget: list
+                    name: list
+                    label: Skill Link
+                    required: false
+                    fields:
+                      - widget: string
+                        name: skill
+                        label: 'Skill Name (Skill 1, Skill 2)'
+                        required: false
+                      - widget: number
+                        name: skillrating
+                        label: Skillrating
+                        required: false
+                        valueType: int
+              - widget: object
+                name: hobby
+                label: Hobby
+                required: false
+                fields:
+                  - widget: string
+                    name: title
+                    label: Title
+                    required: false
+                  - widget: string
+                    name: icon
+                    label: Icon
+                    required: false
+                  - widget: list
+                    name: list
+                    label: Hobby Link
+                    required: false
+                    fields:
+                      - widget: string
+                        name: hobby
+                        label: Hobby Name
+                        required: false

@@ -1,0 +1,333 @@
+stackbitVersion: ~0.2.0
+ssgName: custom
+buildCommand: cd exampleSite && hugo --gc --baseURL "/" --themesDir ../.. && cd ..
+publishDir: exampleSite/public
+staticDir: exampleSite/static
+uploadDir: images
+dataDir: exampleSite
+pagesDir: exampleSite/content
+models:
+  config:
+    type: data
+    label: Config
+    file: config.toml
+    fields:
+      - type: string
+        name: languageCode
+        label: LanguageCode
+        required: true
+      - type: string
+        name: baseURL
+        label: Base Url
+        hidden: true
+      - type: string
+        name: theme
+        label: Theme
+      - type: object
+        name: params
+        label: Site Parameters
+        required: true
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: author
+            label: Author
+          - type: string
+            name: description
+            label: Description
+          - type: string
+            name: copyright
+            label: Copyright
+          - type: object
+            name: theme
+            label: Theme parameters
+            fields:
+              - type: boolean
+                name: allowToggle
+                label: AllowToggle
+              - type: string
+                name: mainTheme
+                label: MainTheme
+              - type: string
+                name: altTheme
+                label: AltTheme
+              - type: boolean
+                name: showAttribute
+                label: ShowAttribute
+          - type: object
+            name: favicons
+            label: Favicons parameters
+            fields:
+              - type: boolean
+                name: use
+                label: Use
+              - type: text
+                name: metas
+                label: Metas
+          - type: object
+            name: profile
+            label: Profile parameters
+            fields:
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: tagline
+                label: Tagline
+              - type: string
+                name: location
+                label: Location
+              - type: string
+                name: photo
+                label: Photo name
+          - type: object
+            name: social
+            label: Section for social links
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: list
+                name: list
+                label: Social Link
+                items:
+                  type: social_list_item
+          - type: list
+            name: showInAccordion
+            label: Specify what is showin in the Accordion
+            items:
+              type: accordian_item
+          - type: object
+            name: aboutme
+            label: About Me
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: icon
+                label: Icon
+              - type: string
+                name: description
+                label: Description
+          - type: object
+            name: experience
+            label: Experience
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: icon
+                label: Icon
+              - type: list
+                name: list
+                label: Experience Link
+                items:
+                  type: experience_list_item
+          - type: object
+            name: education
+            label: Education
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: icon
+                label: Icon
+              - type: list
+                name: list
+                label: Education Link
+                items:
+                  type: education_list_item
+          - type: object
+            name: publication
+            label: Publication
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: icon
+                label: Icon
+              - type: list
+                name: format
+                label: Format
+                items:
+                  type: string
+              - type: list
+                name: types
+                label: types
+                items:
+                  type: string
+              - type: list
+                name: list
+                label: Publication Link
+                items:
+                  type: publication_list_item
+          - type: object
+            name: project
+            label: Project
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: icon
+                label: Icon
+              - type: list
+                name: list
+                label: Project Link
+                items:
+                  type: project_list_item
+          - type: object
+            name: skill
+            label: Skill
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: panelId
+                label: PanelId
+              - type: string
+                name: icon
+                label: Icon
+              - type: list
+                name: list
+                label: Skill Link
+                items:
+                  type: skill_list_item
+          - type: object
+            name: hobby
+            label: Hobby
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: icon
+                label: Icon
+              - type: list
+                name: list
+                label: Hobby Link
+                items:
+                  type: hobby_list_item
+  social_list_item:
+    type: object
+    label: Social Item
+    fields:
+      - type: string
+        name: class
+        label: Class
+      - type: string
+        name: icon
+        label: Icon
+      - type: string
+        name: url
+        label: Url
+      - type: string
+        name: title
+        label: Title
+  accordian_item:
+    type: object
+    label: Accordian Item
+    fields:
+      - type: string
+        name: item
+        label: Item
+      - type: boolean
+        name: expand
+        label: Expand
+  experience_list_item:
+    type: object
+    label: Experience List Item
+    fields:
+      - type: string
+        name: position
+        label: Position
+      - type: string
+        name: dates
+        label: Dates
+      - type: string
+        name: company
+        label: Company Name
+      - type: string
+        name: details
+        label: Details
+      - type: string
+        name: link
+        label: Link
+  education_list_item:
+    type: object
+    label: Education List Item
+    fields:
+      - type: string
+        name: degree
+        label: Degree
+      - type: string
+        name: college
+        label: College
+      - type: string
+        name: dates
+        label: Dates
+      - type: string
+        name: thesis_title
+        label: Thesis Title
+      - type: string
+        name: thesis_link
+        label: Thesis link
+  publication_list_item:
+    type: object
+    label: Publication List Item
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: authors
+        label: Authors
+      - type: string
+        name: date
+        label: Date
+      - type: string
+        name: journal
+        label: Journal
+      - type: string
+        name: link
+        label: Link link
+      - type: string
+        name: type
+        label: Type (Eg. Journal Articles)
+  project_list_item:
+    type: object
+    label: Project List Item
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
+      - type: string
+        name: description
+        label: Description of the project
+  skill_list_item:
+    type: object
+    label: Skill List Item
+    fields:
+      - type: string
+        name: skill
+        label: 'Skill Name (Skill 1, Skill 2)'
+      - type: number
+        name: skillrating
+        label: Skillrating
+  hobby_list_item:
+    type: object
+    label: Hobby List Item
+    fields:
+      - type: string
+        name: hobby
+        label: Hobby Name
