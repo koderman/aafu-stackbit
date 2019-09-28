@@ -199,4 +199,4 @@ url = "#"
 allowToggle = true
 altTheme = "dark"
 mainTheme = "light"
-showAttribute = true
+showAttribute = false
