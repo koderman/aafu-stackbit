@@ -179,32 +179,20 @@ url = "#"
 
 [[params.social.list]]
 class = "fab"
-icon = "fa-stack-overflow"
-title = "StackOverflow"
-url = "#"
-
-[[params.social.list]]
-class = "fab"
-icon = "fa-github"
-title = "GitHub"
-url = "#"
-
-[[params.social.list]]
-class = "fab"
 icon = "fa-twitter"
 title = "Twitter"
 url = "#"
 
 [[params.social.list]]
-class = "ai"
-icon = "ai-google-scholar"
-title = "Google Scholar"
+class = "fab"
+icon = "fa-facebook"
+title = "Facebook"
 url = "#"
 
 [[params.social.list]]
-class = "ai"
-icon = "ai-researchgate"
-title = "ResearchGate"
+class = "fab"
+icon = "fa-instagram"
+title = "Instagram"
 url = "#"
 
 [params.theme]
